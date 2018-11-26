@@ -1,0 +1,14 @@
+//sass --watch stylings/index.scss:dist/themes/light/index.css
+
+@import 'components/titlebar';
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url('Roboto-Thin.ttf') format("truetype");
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}

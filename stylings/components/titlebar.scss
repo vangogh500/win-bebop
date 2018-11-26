@@ -1,0 +1,28 @@
+#titlebar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  height: 32px;
+  width: calc(100%);
+  -webkit-app-region: drag;
+  background-color: #F5F5F5;
+  box-shadow: 0px 1px 1px #D8D8D8;
+  #window-controls {
+    -webkit-app-region: no-drag;
+    display: inline-flex;
+    height: 100%;
+    margin-top: 0px;
+    margin-left: auto;
+    .button {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-weight: lighter;
+      align-items: center;
+      padding: 0px 10px;
+      &:hover {
+        background: #E8E8E8;
+      }
+    }
+  }
+}
