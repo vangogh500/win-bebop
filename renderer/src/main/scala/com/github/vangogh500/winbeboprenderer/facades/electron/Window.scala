@@ -14,7 +14,16 @@ import scala.scalajs.js.annotation.ScalaJSDefined
  */
 @ScalaJSDefined
 trait Window extends js.Object {
+  /**
+   * Maximize window
+   */
   def minimize(): Unit
+  /**
+   * Minimize window
+   */
   def maximize(): Unit
+  /**
+   * Close window
+   */
   def close(): Unit
 }

@@ -15,5 +15,8 @@ import scala.scalajs.js.annotation.JSImport
 @js.native
 @JSImport("electron", "remote")
 object Remote extends js.Object {
+  /**
+   * Get current window
+   */
   def getCurrentWindow(): Window = js.native
 }
