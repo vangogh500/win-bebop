@@ -1131,24 +1131,24 @@ var $d_O = new $TypeData().initClass({
 }, (void 0), (void 0), $is_O, $isArrayOf_O);
 $c_O.prototype.$classData = $d_O;
 /** @constructor */
-function $c_Lcom_github_vangogh500_bebop_Client$() {
+function $c_Lcom_github_vangogh500_winbebopclient_Client$() {
   $c_O.call(this)
 }
-$c_Lcom_github_vangogh500_bebop_Client$.prototype = new $h_O();
-$c_Lcom_github_vangogh500_bebop_Client$.prototype.constructor = $c_Lcom_github_vangogh500_bebop_Client$;
+$c_Lcom_github_vangogh500_winbebopclient_Client$.prototype = new $h_O();
+$c_Lcom_github_vangogh500_winbebopclient_Client$.prototype.constructor = $c_Lcom_github_vangogh500_winbebopclient_Client$;
 /** @constructor */
-function $h_Lcom_github_vangogh500_bebop_Client$() {
+function $h_Lcom_github_vangogh500_winbebopclient_Client$() {
   /*<skip>*/
 }
-$h_Lcom_github_vangogh500_bebop_Client$.prototype = $c_Lcom_github_vangogh500_bebop_Client$.prototype;
-$c_Lcom_github_vangogh500_bebop_Client$.prototype.init___ = (function() {
+$h_Lcom_github_vangogh500_winbebopclient_Client$.prototype = $c_Lcom_github_vangogh500_winbebopclient_Client$.prototype;
+$c_Lcom_github_vangogh500_winbebopclient_Client$.prototype.init___ = (function() {
   return this
 });
-$c_Lcom_github_vangogh500_bebop_Client$.prototype.main__AT__V = (function(args) {
+$c_Lcom_github_vangogh500_winbebopclient_Client$.prototype.main__AT__V = (function(args) {
   $i_electron.app.on("ready", (function($this) {
     return (function() {
-      var win = $m_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$().apply__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow(800, 600, false, (void 0));
-      win.loadFile("index.html")
+      var win = $m_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$().apply__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow(800, 600, false, (void 0));
+      win.loadFile("./resources/index.html")
     })
   })(this));
   $i_electron.app.on("window-all-closed", (function(this$2$1) {
@@ -1157,66 +1157,66 @@ $c_Lcom_github_vangogh500_bebop_Client$.prototype.main__AT__V = (function(args) 
     })
   })(this))
 });
-var $d_Lcom_github_vangogh500_bebop_Client$ = new $TypeData().initClass({
-  Lcom_github_vangogh500_bebop_Client$: 0
-}, false, "com.github.vangogh500.bebop.Client$", {
-  Lcom_github_vangogh500_bebop_Client$: 1,
+var $d_Lcom_github_vangogh500_winbebopclient_Client$ = new $TypeData().initClass({
+  Lcom_github_vangogh500_winbebopclient_Client$: 0
+}, false, "com.github.vangogh500.winbebopclient.Client$", {
+  Lcom_github_vangogh500_winbebopclient_Client$: 1,
   O: 1
 });
-$c_Lcom_github_vangogh500_bebop_Client$.prototype.$classData = $d_Lcom_github_vangogh500_bebop_Client$;
-var $n_Lcom_github_vangogh500_bebop_Client$ = (void 0);
-function $m_Lcom_github_vangogh500_bebop_Client$() {
-  if ((!$n_Lcom_github_vangogh500_bebop_Client$)) {
-    $n_Lcom_github_vangogh500_bebop_Client$ = new $c_Lcom_github_vangogh500_bebop_Client$().init___()
+$c_Lcom_github_vangogh500_winbebopclient_Client$.prototype.$classData = $d_Lcom_github_vangogh500_winbebopclient_Client$;
+var $n_Lcom_github_vangogh500_winbebopclient_Client$ = (void 0);
+function $m_Lcom_github_vangogh500_winbebopclient_Client$() {
+  if ((!$n_Lcom_github_vangogh500_winbebopclient_Client$)) {
+    $n_Lcom_github_vangogh500_winbebopclient_Client$ = new $c_Lcom_github_vangogh500_winbebopclient_Client$().init___()
   };
-  return $n_Lcom_github_vangogh500_bebop_Client$
+  return $n_Lcom_github_vangogh500_winbebopclient_Client$
 }
 /** @constructor */
-function $c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$() {
+function $c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$() {
   $c_O.call(this)
 }
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$.prototype = new $h_O();
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$.prototype.constructor = $c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$;
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$.prototype = new $h_O();
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$.prototype.constructor = $c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$;
 /** @constructor */
-function $h_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$() {
+function $h_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$() {
   /*<skip>*/
 }
-$h_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$.prototype = $c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$.prototype;
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$.prototype.init___ = (function() {
+$h_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$.prototype = $c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$.prototype;
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$.prototype.init___ = (function() {
   return this
 });
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$.prototype.apply__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow = (function(width, height, frame, titleBarStyle) {
-  return new $i_electron.BrowserWindow($m_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$().apply__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions(width, height, frame, titleBarStyle))
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$.prototype.apply__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow = (function(width, height, frame, titleBarStyle) {
+  return new $i_electron.BrowserWindow($m_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$().apply__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions(width, height, frame, titleBarStyle))
 });
-var $d_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$ = new $TypeData().initClass({
-  Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$: 0
-}, false, "com.github.vangogh500.bebop.facades.electron.BrowserWindow$", {
-  Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$: 1,
+var $d_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$ = new $TypeData().initClass({
+  Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$: 0
+}, false, "com.github.vangogh500.winbebopclient.facades.electron.BrowserWindow$", {
+  Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$: 1,
   O: 1
 });
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$.prototype.$classData = $d_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$;
-var $n_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$ = (void 0);
-function $m_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$() {
-  if ((!$n_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$)) {
-    $n_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$ = new $c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$().init___()
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$.prototype.$classData = $d_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$;
+var $n_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$ = (void 0);
+function $m_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$() {
+  if ((!$n_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$)) {
+    $n_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$ = new $c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$().init___()
   };
-  return $n_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindow$
+  return $n_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindow$
 }
 /** @constructor */
-function $c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$() {
+function $c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$() {
   $c_O.call(this)
 }
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$.prototype = new $h_O();
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$.prototype.constructor = $c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$;
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$.prototype = new $h_O();
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$.prototype.constructor = $c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$;
 /** @constructor */
-function $h_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$() {
+function $h_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$() {
   /*<skip>*/
 }
-$h_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$.prototype = $c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$.prototype;
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$.prototype.init___ = (function() {
+$h_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$.prototype = $c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$.prototype;
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$.prototype.init___ = (function() {
   return this
 });
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$.prototype.apply__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions = (function(w, h, f, tbs) {
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$.prototype.apply__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__sjs_js_UndefOr__Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions = (function(w, h, f, tbs) {
   var $this = {};
   $this.width = null;
   $this.height = null;
@@ -1228,19 +1228,19 @@ $c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$.prototype
   $this.titleBarStyle = tbs;
   return $this
 });
-var $d_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$ = new $TypeData().initClass({
-  Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$: 0
-}, false, "com.github.vangogh500.bebop.facades.electron.BrowserWindowOptions$", {
-  Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$: 1,
+var $d_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$ = new $TypeData().initClass({
+  Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$: 0
+}, false, "com.github.vangogh500.winbebopclient.facades.electron.BrowserWindowOptions$", {
+  Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$: 1,
   O: 1
 });
-$c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$.prototype.$classData = $d_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$;
-var $n_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$ = (void 0);
-function $m_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$() {
-  if ((!$n_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$)) {
-    $n_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$ = new $c_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$().init___()
+$c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$.prototype.$classData = $d_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$;
+var $n_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$ = (void 0);
+function $m_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$() {
+  if ((!$n_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$)) {
+    $n_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$ = new $c_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$().init___()
   };
-  return $n_Lcom_github_vangogh500_bebop_facades_electron_BrowserWindowOptions$
+  return $n_Lcom_github_vangogh500_winbebopclient_facades_electron_BrowserWindowOptions$
 }
 /** @constructor */
 function $c_jl_Class() {
@@ -2676,5 +2676,5 @@ var $d_sjs_js_JavaScriptException = new $TypeData().initClass({
   s_Serializable: 1
 });
 $c_sjs_js_JavaScriptException.prototype.$classData = $d_sjs_js_JavaScriptException;
-$m_Lcom_github_vangogh500_bebop_Client$().main__AT__V($makeNativeArrayWrapper($d_T.getArrayOf(), []));
-//# sourceMappingURL=win-bebop-fastopt.js.map
+$m_Lcom_github_vangogh500_winbebopclient_Client$().main__AT__V($makeNativeArrayWrapper($d_T.getArrayOf(), []));
+//# sourceMappingURL=win-bebop-client-fastopt.js.map

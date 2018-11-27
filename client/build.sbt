@@ -1,4 +1,4 @@
-name := "win-bebop"
+name := "win-bebop-client"
 organization := "com.github.vangogh500"
 
 enablePlugins(ScalaJSPlugin)
@@ -15,8 +15,8 @@ lazy val fastDist = taskKey[Unit]("Compile and copy paste projects and generate 
 fastDist := {
   val mainProcessDirectory = (fastOptJS in Compile).value.data
   val files = Seq(
-    mainProcessDirectory.getParentFile / "win-bebop-fastopt.js" -> baseDirectory.value / ".." / "dist" / "main.js",
-    mainProcessDirectory.getParentFile / "win-bebop-fastopt.js.map" -> baseDirectory.value / ".." / "dist" / "main.js.map"
+    mainProcessDirectory.getParentFile / "win-bebop-client-fastopt.js" -> baseDirectory.value / ".." / "dist" / "client.js",
+    mainProcessDirectory.getParentFile / "win-bebop-client-fastopt.js.map" -> baseDirectory.value / ".." / "dist" / "client.js.map"
   )
   IO.copy(files, true, false, false)
 }

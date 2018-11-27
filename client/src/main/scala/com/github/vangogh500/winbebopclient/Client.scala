@@ -1,7 +1,14 @@
-package com.github.vangogh500.bebop
+/**
+ * Win bebop client
+ * @author Kai Matsuda
+ */
+package com.github.vangogh500.winbebopclient
 
 import facades.electron._
 
+/**
+ * Main
+ */
 object Client {
   def main(args: Array[String]): Unit = {
     App.on("ready", () => {
@@ -10,8 +17,7 @@ object Client {
         height = 600,
         frame = false
       )
-      win.loadFile("index.html")
-      //win.webContents.openDevTools()
+      win.loadFile("./resources/index.html")
     })
     App.on("window-all-closed", () => App.quit())
   }
