@@ -4,11 +4,20 @@ package components
 import japgolly.scalajs.react._
 import japgolly.scalajs.react.vdom.html_<^._
 
+import facades.electron.Remote
+
 object TitleBar {
+  def minimize(): Callback = Callback {
+    Remote.getCurrentWindow().minimize()
+  }
   private val component = ScalaComponent.static("Renderer")(
     <.header(^.id := "titlebar")(
       <.div(^.id := "window-controls")(
-        <.div(^.id := "min-button", ^.className := "button")(
+        <.div(
+          ^.id := "min-button",
+          ^.className := "button",
+          ^.onClick --> minimize()
+        )(
           <.span(^.className := "mdi mdi-window-minimize")
         ),
         <.div(^.id := "max-button", ^.className := "button")(

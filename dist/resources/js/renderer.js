@@ -1,4 +1,3 @@
-(function(){
 'use strict';
 /* Scala.js runtime support
  * Copyright 2013 LAMP/EPFL
@@ -24,14 +23,6 @@ var $g =
 $env["global"] = $g;
 
 // Where to send exports
-
-
-
-var $e =
-  (typeof $env["exportsNamespace"] === "object" && $env["exportsNamespace"])
-    ? $env["exportsNamespace"] : $g;
-
-$env["exportsNamespace"] = $e;
 
 // Freeze the environment info
 $g["Object"]["freeze"]($env);
@@ -525,9 +516,9 @@ var $superSet = function(initialProto, self, propName, value) {
 };
 
 
-
-
-
+var $moduleDefault = function(m) {
+  return (m && (typeof m === "object") && "default" in m) ? m["default"] : m;
+};
 
 
 var $propertiesOf = function(obj) {
@@ -1081,6 +1072,9 @@ var $asArrayOf_J = $makeAsArrayOfPrimitive($isArrayOf_J, "J");
 var $asArrayOf_F = $makeAsArrayOfPrimitive($isArrayOf_F, "F");
 var $asArrayOf_D = $makeAsArrayOfPrimitive($isArrayOf_D, "D");
 
+var $i_electron = require("electron");
+var $i_react = require("react");
+var $i_react$002ddom = require("react-dom");
 function $is_F0(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.F0)))
 }
@@ -1308,7 +1302,11 @@ $c_Lcom_github_vangogh500_winbeboprenderer_components_TitleBar$.prototype.init__
   $m_Ljapgolly_scalajs_react_vdom_PackageBase$();
   var this$16 = new $c_Ljapgolly_scalajs_react_vdom_Attr$Generic().init___T("id");
   var t$2 = $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().vdomAttrVtString$2;
-  var array$2 = [$m_Ljapgolly_scalajs_react_vdom_Attr$ValueType$().apply$extension__F2__T__O__Ljapgolly_scalajs_react_vdom_TagMod(t$2, this$16.name$1, "min-button"), ($m_Ljapgolly_scalajs_react_vdom_html$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_Attr$ClassName$()).$$colon$eq__O__F2__Ljapgolly_scalajs_react_vdom_TagMod("button", $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().vdomAttrVtString$2)];
+  var array$2 = [$m_Ljapgolly_scalajs_react_vdom_Attr$ValueType$().apply$extension__F2__T__O__Ljapgolly_scalajs_react_vdom_TagMod(t$2, this$16.name$1, "min-button"), ($m_Ljapgolly_scalajs_react_vdom_html$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_Attr$ClassName$()).$$colon$eq__O__F2__Ljapgolly_scalajs_react_vdom_TagMod("button", $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().vdomAttrVtString$2), $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().$$up$3.onClick$1.$$minus$minus$greater__F0__Ljapgolly_scalajs_react_vdom_DomCallbackResult__Ljapgolly_scalajs_react_vdom_TagMod(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    return (function() {
+      return new $c_Ljapgolly_scalajs_react_CallbackTo().init___F0($m_Lcom_github_vangogh500_winbeboprenderer_components_TitleBar$().minimize__F0())
+    })
+  })(this)), null)];
   var jsx$10 = jsx$11.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2));
   var jsx$9 = $m_Ljapgolly_scalajs_react_vdom_HtmlTagOf$();
   $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
@@ -1319,9 +1317,9 @@ $c_Lcom_github_vangogh500_winbeboprenderer_components_TitleBar$.prototype.init__
   $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
   $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
   $m_Ljapgolly_scalajs_react_vdom_PackageBase$();
-  var this$29 = new $c_Ljapgolly_scalajs_react_vdom_Attr$Generic().init___T("id");
+  var this$30 = new $c_Ljapgolly_scalajs_react_vdom_Attr$Generic().init___T("id");
   var t$3 = $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().vdomAttrVtString$2;
-  var array$5 = [$m_Ljapgolly_scalajs_react_vdom_Attr$ValueType$().apply$extension__F2__T__O__Ljapgolly_scalajs_react_vdom_TagMod(t$3, this$29.name$1, "max-button"), ($m_Ljapgolly_scalajs_react_vdom_html$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_Attr$ClassName$()).$$colon$eq__O__F2__Ljapgolly_scalajs_react_vdom_TagMod("button", $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().vdomAttrVtString$2)];
+  var array$5 = [$m_Ljapgolly_scalajs_react_vdom_Attr$ValueType$().apply$extension__F2__T__O__Ljapgolly_scalajs_react_vdom_TagMod(t$3, this$30.name$1, "max-button"), ($m_Ljapgolly_scalajs_react_vdom_html$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_Attr$ClassName$()).$$colon$eq__O__F2__Ljapgolly_scalajs_react_vdom_TagMod("button", $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().vdomAttrVtString$2)];
   var jsx$6 = jsx$7.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$5));
   var jsx$5 = $m_Ljapgolly_scalajs_react_vdom_HtmlTagOf$();
   $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
@@ -1332,9 +1330,9 @@ $c_Lcom_github_vangogh500_winbeboprenderer_components_TitleBar$.prototype.init__
   $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
   $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
   $m_Ljapgolly_scalajs_react_vdom_PackageBase$();
-  var this$42 = new $c_Ljapgolly_scalajs_react_vdom_Attr$Generic().init___T("id");
+  var this$43 = new $c_Ljapgolly_scalajs_react_vdom_Attr$Generic().init___T("id");
   var t$4 = $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().vdomAttrVtString$2;
-  var array$8 = [$m_Ljapgolly_scalajs_react_vdom_Attr$ValueType$().apply$extension__F2__T__O__Ljapgolly_scalajs_react_vdom_TagMod(t$4, this$42.name$1, "close-button"), ($m_Ljapgolly_scalajs_react_vdom_html$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_Attr$ClassName$()).$$colon$eq__O__F2__Ljapgolly_scalajs_react_vdom_TagMod("button", $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().vdomAttrVtString$2)];
+  var array$8 = [$m_Ljapgolly_scalajs_react_vdom_Attr$ValueType$().apply$extension__F2__T__O__Ljapgolly_scalajs_react_vdom_TagMod(t$4, this$43.name$1, "close-button"), ($m_Ljapgolly_scalajs_react_vdom_html$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_Attr$ClassName$()).$$colon$eq__O__F2__Ljapgolly_scalajs_react_vdom_TagMod("button", $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$().vdomAttrVtString$2)];
   var jsx$2 = jsx$3.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$8));
   var jsx$1 = $m_Ljapgolly_scalajs_react_vdom_HtmlTagOf$();
   $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
@@ -1349,6 +1347,13 @@ $c_Lcom_github_vangogh500_winbeboprenderer_components_TitleBar$.prototype.init__
 $c_Lcom_github_vangogh500_winbeboprenderer_components_TitleBar$.prototype.apply__Ljapgolly_scalajs_react_component_Js$UnmountedWithRoot = (function() {
   var c = this.component$1;
   return $as_Ljapgolly_scalajs_react_component_Js$UnmountedWithRoot($as_Ljapgolly_scalajs_react_CtorType$Nullary(c.ctor__Ljapgolly_scalajs_react_CtorType()).apply__O())
+});
+$c_Lcom_github_vangogh500_winbeboprenderer_components_TitleBar$.prototype.minimize__F0 = (function() {
+  return $m_Ljapgolly_scalajs_react_Callback$().apply__F0__Ljapgolly_scalajs_react_Callback$ResultGuard__F0(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    return (function() {
+      $i_electron.remote.getCurrentWindow().minimize()
+    })
+  })(this)), null)
 });
 var $d_Lcom_github_vangogh500_winbeboprenderer_components_TitleBar$ = new $TypeData().initClass({
   Lcom_github_vangogh500_winbeboprenderer_components_TitleBar$: 0
@@ -1380,6 +1385,14 @@ $c_Ljapgolly_scalajs_react_Callback$.prototype.init___ = (function() {
   $n_Ljapgolly_scalajs_react_Callback$ = this;
   this.empty$1 = $m_Ljapgolly_scalajs_react_CallbackTo$().pure__O__F0((void 0));
   return this
+});
+$c_Ljapgolly_scalajs_react_Callback$.prototype.apply__F0__Ljapgolly_scalajs_react_Callback$ResultGuard__F0 = (function(f, evidence$2) {
+  var f$2 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this, f$1) {
+    return (function() {
+      f$1.apply__O()
+    })
+  })(this, f));
+  return f$2
 });
 var $d_Ljapgolly_scalajs_react_Callback$ = new $TypeData().initClass({
   Ljapgolly_scalajs_react_Callback$: 0
@@ -1538,10 +1551,10 @@ $c_Ljapgolly_scalajs_react_CtorType$Summoner$.prototype.init___ = (function() {
 $c_Ljapgolly_scalajs_react_CtorType$Summoner$.prototype.summonN__Ljapgolly_scalajs_react_internal_Singleton__Ljapgolly_scalajs_react_CtorType$Summoner = (function(s) {
   var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this, s$1) {
     return (function(rc$2) {
-      return new $c_Ljapgolly_scalajs_react_CtorType$Nullary().init___O__F1__sjs_js_UndefOr($g.React.createElement(rc$2, s$1.value$1), new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1, s$1$1, rc) {
+      return new $c_Ljapgolly_scalajs_react_CtorType$Nullary().init___O__F1__sjs_js_UndefOr($i_react.createElement(rc$2, s$1.value$1), new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1, s$1$1, rc) {
         return (function(m$2) {
           var m = $as_Ljapgolly_scalajs_react_CtorType$Mod(m$2).mod$1;
-          return $g.React.createElement(rc, $m_Ljapgolly_scalajs_react_CtorType$Mod$().applyAndCast$extension__F1__sjs_js_Object__sjs_js_Object(m, s$1$1.mutableObj$1.apply__O()))
+          return $i_react.createElement(rc, $m_Ljapgolly_scalajs_react_CtorType$Mod$().applyAndCast$extension__F1__sjs_js_Object__sjs_js_Object(m, s$1$1.mutableObj$1.apply__O()))
         })
       })($this, s$1, rc$2)), (void 0))
     })
@@ -1592,7 +1605,7 @@ function $m_Ljapgolly_scalajs_react_component_Generic$() {
   return $n_Ljapgolly_scalajs_react_component_Generic$
 }
 function $f_Ljapgolly_scalajs_react_component_Generic$UnmountedSimple__renderIntoDOM__sjs_js_$bar__F0__O($thiz, container, callback) {
-  return $thiz.mountRaw__F1().apply__O__O($g.ReactDOM.render($thiz.raw__Ljapgolly_scalajs_react_raw_React$ComponentElement(), container, $m_Ljapgolly_scalajs_react_CallbackTo$().toJsFn$extension__F0__sjs_js_Function0(callback)))
+  return $thiz.mountRaw__F1().apply__O__O($i_react$002ddom.render($thiz.raw__Ljapgolly_scalajs_react_raw_React$ComponentElement(), container, $m_Ljapgolly_scalajs_react_CallbackTo$().toJsFn$extension__F0__sjs_js_Function0(callback)))
 }
 /** @constructor */
 function $c_Ljapgolly_scalajs_react_component_Scala$() {
@@ -2149,7 +2162,7 @@ $c_Ljapgolly_scalajs_react_component_builder_ViaReactComponent$.prototype.init__
   this.x$4$1 = new $c_T2().init___O__O(_getPrototypeOf, _setPrototypeOf);
   this.$$undgetPrototypeOf$1 = $as_F1(this.x$4$1.$$und1$f);
   this.$$undsetPrototypeOf$1 = this.x$4$1.$$und2$f;
-  this.ReactComponent$1 = $g.React.Component;
+  this.ReactComponent$1 = $i_react.Component;
   return this
 });
 $c_Ljapgolly_scalajs_react_component_builder_ViaReactComponent$.prototype.$$unddefineProperties__p1__sjs_js_Object__sjs_js_Array__V = (function(target, props) {
@@ -3073,7 +3086,7 @@ $c_Ljapgolly_scalajs_react_vdom_Builder$ToRawReactElement$.prototype.init___ = (
       if ((key$2 !== (void 0))) {
         $m_Ljapgolly_scalajs_react_vdom_Builder$().setObjectKeyValue__sjs_js_Object__T__sjs_js_Any__V(props$2, "key", key$2)
       };
-      var jsx$1 = $g.React;
+      var jsx$1 = $i_react;
       return jsx$1.createElement.apply(jsx$1, [tag, props$2].concat(children$2))
     })
   })(this));
@@ -5745,6 +5758,26 @@ function $h_Ljapgolly_scalajs_react_vdom_Attr$Event() {
   /*<skip>*/
 }
 $h_Ljapgolly_scalajs_react_vdom_Attr$Event.prototype = $c_Ljapgolly_scalajs_react_vdom_Attr$Event.prototype;
+$c_Ljapgolly_scalajs_react_vdom_Attr$Event.prototype.$$eq$eq$greater__F1__Ljapgolly_scalajs_react_vdom_DomCallbackResult__Ljapgolly_scalajs_react_vdom_TagMod = (function(eventHandler, evidence$2) {
+  var a = (function(arg$outer, eventHandler$1) {
+    return (function(arg1$2) {
+      return arg$outer.japgolly$scalajs$react$vdom$Attr$Event$$$anonfun$$eq$eq$greater$1__Ljapgolly_scalajs_react_raw_SyntheticEvent__F1__O(arg1$2, eventHandler$1)
+    })
+  })(this, eventHandler);
+  var t = $m_Ljapgolly_scalajs_react_vdom_Attr$ValueType$().direct$1;
+  return $m_Ljapgolly_scalajs_react_vdom_Attr$ValueType$().apply$extension__F2__T__O__Ljapgolly_scalajs_react_vdom_TagMod(t, this.name$1, a)
+});
+$c_Ljapgolly_scalajs_react_vdom_Attr$Event.prototype.japgolly$scalajs$react$vdom$Attr$Event$$$anonfun$$eq$eq$greater$1__Ljapgolly_scalajs_react_raw_SyntheticEvent__F1__O = (function(e, eventHandler$1) {
+  var $$this = $as_Ljapgolly_scalajs_react_CallbackTo(eventHandler$1.apply__O__O(e)).japgolly$scalajs$react$CallbackTo$$f$1;
+  return $$this.apply__O()
+});
+$c_Ljapgolly_scalajs_react_vdom_Attr$Event.prototype.$$minus$minus$greater__F0__Ljapgolly_scalajs_react_vdom_DomCallbackResult__Ljapgolly_scalajs_react_vdom_TagMod = (function(callback, evidence$1) {
+  return this.$$eq$eq$greater__F1__Ljapgolly_scalajs_react_vdom_DomCallbackResult__Ljapgolly_scalajs_react_vdom_TagMod(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this, callback$1) {
+    return (function(x$2$2) {
+      return new $c_Ljapgolly_scalajs_react_CallbackTo().init___F0($as_Ljapgolly_scalajs_react_CallbackTo(callback$1.apply__O()).japgolly$scalajs$react$CallbackTo$$f$1)
+    })
+  })(this, callback)), evidence$1)
+});
 $c_Ljapgolly_scalajs_react_vdom_Attr$Event.prototype.init___T = (function(name) {
   $c_Ljapgolly_scalajs_react_vdom_Attr.prototype.init___T.call(this, name);
   return this
@@ -11098,5 +11131,4 @@ var $d_sjs_js_WrappedArray = new $TypeData().initClass({
 });
 $c_sjs_js_WrappedArray.prototype.$classData = $d_sjs_js_WrappedArray;
 $m_Lcom_github_vangogh500_winbeboprenderer_Main$().main__AT__V($makeNativeArrayWrapper($d_T.getArrayOf(), []));
-}).call(this);
 //# sourceMappingURL=win-bebop-renderer-fastopt.js.map
