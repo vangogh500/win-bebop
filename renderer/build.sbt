@@ -9,8 +9,8 @@ lazy val fastDist = taskKey[Unit]("Compile and copy paste projects and generate 
 fastDist := {
   val mainProcessDirectory = (fastOptJS in Compile).value.data
   val files = Seq(
-    mainProcessDirectory.getParentFile / "win-bebop-renderer.js" -> baseDirectory.value / ".." / "dist" / "renderer.js",
-    mainProcessDirectory.getParentFile / "win-bebop-renderer.js.map" -> baseDirectory.value / ".." / "dist" / "renderer.js.map"
+    mainProcessDirectory.getParentFile / "win-bebop-renderer-fastopt.js" -> baseDirectory.value / ".." / "dist" / "resources" / "js" / "renderer.js",
+    mainProcessDirectory.getParentFile / "win-bebop-renderer-fastopt.js.map" -> baseDirectory.value / ".." / "dist" / "resources" / "js" / "renderer.js.map"
   )
   IO.copy(files, true, false, false)
 }
