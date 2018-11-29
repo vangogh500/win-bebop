@@ -9,11 +9,17 @@ lazy val fastDist = taskKey[Unit]("Compile and copy paste projects and generate 
 
 fastDist := {
   val mainProcessDirectory = (fastOptJS in Compile).value.data
+  def processFile(from: File, to: File): Unit = {
+    val xs = IO.readLines(from).filter(!_.matches(".*\\s\\$e[\\s;].*"))
+    IO.writeLines(to, xs)
+  }
   val files = Seq(
     mainProcessDirectory.getParentFile / "win-bebop-renderer-fastopt.js" -> baseDirectory.value / ".." / "dist" / "resources" / "js" / "renderer.js",
     mainProcessDirectory.getParentFile / "win-bebop-renderer-fastopt.js.map" -> baseDirectory.value / ".." / "dist" / "resources" / "js" / "renderer.js.map"
   )
-  IO.copy(files, true, false, false)
+  files.foreach {
+    case (in, out) => processFile(in, out)
+  }
 }
 
 libraryDependencies ++= {

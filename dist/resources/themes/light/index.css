@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   position: fixed;
+  top: 0px;
   height: 32px;
   width: calc(100%);
   -webkit-app-region: drag;
@@ -22,6 +23,9 @@
       padding: 0px 10px; }
       #titlebar #window-controls .button:hover {
         background: #E8E8E8; }
+
+#appcontainer {
+  margin-top: 32px; }
 
 @font-face {
   font-family: 'Roboto', sans-serif;

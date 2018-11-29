@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   position: fixed;
+  top: 0px;
   height: 32px;
   width: calc(100%);
   -webkit-app-region: drag;
@@ -25,4 +26,8 @@
       }
     }
   }
+}
+
+#appcontainer {
+  margin-top: 32px;
 }

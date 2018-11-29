@@ -15,7 +15,7 @@ import facades.electron.Remote
  */
 object TitleBar {
   /**
-   * Create a new instance of react component
+   * React component builder
    */
   private val component = ScalaComponent.static("Renderer")(
     <.header(^.id := "titlebar")(
@@ -42,7 +42,7 @@ object TitleBar {
     )
   )
   /**
-   *
+   * Instantiate a component
    */
   def apply() = component()
 }

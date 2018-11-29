@@ -16,7 +16,12 @@ object Renderer {
    * React component builder
    */
   private val component = ScalaComponent.static("Renderer")(
-      TitleBar()
+    <.div(
+      TitleBar(),
+      <.div(^.id := "appcontainer")(
+        Library()
+      )
+    )
   )
   /**
    * Create a new instance of react component
